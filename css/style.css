@@ -1,3 +1,19 @@
+/* font utilizzate  */
+
+/* .edu-tas-beginner-<uniquifier > {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .sometype-mono-<uniquifier> {
+    font-family: "Sometype Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
 /* header  */
 
 header {
@@ -9,6 +25,10 @@ header {
 header h1 {
   font-size: 70px;
   padding: 5px;
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 
 /* main  */
