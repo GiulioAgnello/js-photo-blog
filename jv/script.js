@@ -15,7 +15,7 @@ axios.get(apiLink).then((respons) => {
     currentPost = postArray[i];
 
     console.log(currentPost.url);
-    const post = `<div class="col-3">
+    const post = `<div class="col-12 col-sm-4 col-md-3">
         <div class="postcard">
           <img class="pin" src="./img/pin.svg" alt="" />
           <div class="cardhead"><img src="${currentPost.url}" alt="" /></div>
