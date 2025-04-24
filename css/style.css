@@ -50,6 +50,7 @@ main {
   max-width: 300px;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .cardhead {
@@ -74,8 +75,9 @@ main {
 }
 
 .pin {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: absolute;
+
+  left: 130px;
+  inset-block-start: -15px;
+  height: 9%;
 }
