@@ -1,0 +1,19 @@
+/* header  */
+
+header {
+  text-align: center;
+  background-image: url(../img/wall.png);
+  height: 100px;
+}
+
+header h1 {
+  font-size: 70px;
+  padding: 5px;
+}
+
+/* main  */
+
+main {
+  background-image: url(../img/cork.png);
+  height: 100vh;
+}
