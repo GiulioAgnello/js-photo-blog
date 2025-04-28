@@ -61,8 +61,9 @@ main {
 }
 /* hover per card  */
 .postcard:hover {
-  transform: rotate(90deg);
+  transform: rotate(30deg);
   z-index: 10;
+  scale: 1.1;
 }
 /* hover per card  */
 
