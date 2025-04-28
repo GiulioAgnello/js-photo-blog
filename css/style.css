@@ -90,7 +90,7 @@ main {
 
 .overlay {
   position: fixed;
-  /* display: none; */
+
   z-index: 10;
   top: 0;
   bottom: 0;

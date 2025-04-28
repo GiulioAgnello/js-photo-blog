@@ -1,4 +1,5 @@
 const postHolder = document.getElementById("postHolder");
+const overlayEL = document.querySelector(".overlay");
 
 // dpbbiamo prendere le info da api
 
@@ -16,7 +17,7 @@ axios.get(apiLink).then((respons) => {
 
     console.log(currentPost.url);
     const post = `<div class="col-12 col-sm-4 col-xl-3 ">
-        <div class="postcard">
+        <div class="postcard" id="${currentPost.id}">
           <img class="pin" src="./img/pin.svg" alt="" />
           <div class="cardhead"><img src="${currentPost.url}" alt="${currentPost.title}" /></div>
           <div class="cardmain">
@@ -27,4 +28,12 @@ axios.get(apiLink).then((respons) => {
       </div>`;
     postHolder.innerHTML += post;
   }
+  const postcardEl = document.querySelector(".postcard");
+  console.log(postcardEl);
+  // postcardEl.forEach((post) => {
+  //   console.log(post.url);
+  //   postcardEl.addEventListener("click", () => {
+  //     if (post.id === currentPost.id)
+  //   });
+  // });
 });
