@@ -1,6 +1,6 @@
 const postHolder = document.getElementById("postHolder");
 const overlayEL = document.querySelector(".overlay");
-
+const imgContaner = document.querySelector(".imagecontainer");
 // dpbbiamo prendere le info da api
 
 apiLink = "https://lanciweb.github.io/demo/api/pictures/";
@@ -32,18 +32,24 @@ axios.get(apiLink).then((respons) => {
   console.log(postcardEl);
   postcardEl.forEach((post) => {
     console.log(post);
-    post.addEventListener("click", () => {
+
+    // primo clic
+    post.addEventListener("click", (e) => {
+      e.preventDefault();
       const image = document.querySelector(`#${post.id} img`).src;
-      console.log(image);
-      let overlayImage = `<button type="button" class="botton btn btn-light mb-4">Close</button><br />
-          <img src="${image}" alt="${post.title}" /> `;
-      overlayEL.classList.remove("d-none");
-      overlayEL.innerHTML += overlayImage;
+
+      let overlayImage = `<img src="${image}" alt="${post.title}" /> `;
+
+      imgContaner.innerHTML += overlayImage;
       const bottonEl = document.querySelector(".botton");
-      bottonEl.addEventListener("click", () => {
-        overlayImage += ``;
+      bottonEl.addEventListener("click", (e) => {
+        e.preventDefault();
+        imgContaner.innerHTML = "";
         overlayEL.classList.add("d-none");
       });
+      console.log(overlayImage);
+
+      overlayEL.classList.remove("d-none");
     });
   });
 });
